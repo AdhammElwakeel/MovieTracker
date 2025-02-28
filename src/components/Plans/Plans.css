@@ -1,0 +1,123 @@
+.plan-container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: center;
+}
+
+.plan-heading {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.plan-heading h2 {
+    color: #fff;
+    font-family: Manrope;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.plan-heading p {
+    color: #999;
+    font-family: Manrope;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.plan-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.plan-box {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
+    border-radius: 12px;
+    border: 1px solid #262626;
+    background: #1a1a1a;
+    margin: auto;
+}
+
+.plan-box .plan-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.plan-box h2 {
+    color: #fff;
+    font-family: Manrope;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.plan-box p {
+    color: #999;
+    font-family: Manrope;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    max-width: 400px;
+}
+
+.plan-price h2 {
+    color: #fff;
+    font-family: Manrope;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 73%;
+}
+
+.plan-price h2 span {
+    color: #999;
+    font-family: Manrope;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 73%;
+}
+
+.box-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.box-buttons button {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 15px;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #262626;
+    background: #141414;
+    color: #fff;
+    font-family: Manrope;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.box-buttons .active {
+    background: #e50000;
+}
+@media (max-width: 768px) {
+    .plan-content {
+        flex-direction: column;
+    }
+}
+@media (max-width: 600px) {
+    .plan-content {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    .box-buttons button {
+        font-size: 10px;
+    }
+}

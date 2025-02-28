@@ -1,0 +1,60 @@
+.poster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.poster img {
+    width: 100%;
+    object-fit: cover;
+}
+.poster .poster-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.poster .poster-heading-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+
+    padding: 20px;
+}
+.poster .poster-heading-text h3 {
+    color: #fff;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+}
+.poster .poster-heading-text p {
+    color: #999;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+
+    max-width: 780px;
+}
+.poster-button {
+    display: flex;
+    align-self: center;
+    gap: 4px;
+    align-items: center;
+
+    padding: 18px 24px;
+
+    background: #e50000;
+    color: #fff;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}

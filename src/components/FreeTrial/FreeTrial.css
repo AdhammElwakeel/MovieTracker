@@ -1,0 +1,81 @@
+.freeTrial-content {
+    background-image: url("../../assets/images/FreeTrial.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    border: 1px solid #262626;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    min-height: 30vh;
+    color: white;
+}
+
+.freeTrial-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.freeTrial-heading h2 {
+    color: #fff;
+    font-family: Manrope, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.freeTrial-heading p {
+    color: #999;
+    font-family: Manrope, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.freeTrial-button {
+    display: flex;
+    padding: 18px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #e50000;
+    color: #fff;
+
+    font-family: Manrope, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+}
+@media (max-width: 1024px) {
+    .freeTrial-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+@media (max-width: 768px) {
+    .freeTrial-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .freeTrial-heading {
+        text-align: center;
+    }
+    .freeTrial-heading h2 {
+        font-size: 20px;
+    }
+    .freeTrial-heading p {
+        font-size: 15px;
+    }
+    .freeTrial-button {
+        font-size: 13px;
+    }
+}
