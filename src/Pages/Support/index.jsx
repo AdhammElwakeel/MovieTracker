@@ -1,7 +1,13 @@
+import "./Support.css";
+import FAQ from "../../components/FAQ";
+import FreeTrial from "../../components/FreeTrial";
 const Support = () => {
   return (
     <>
-      <h2>support</h2>
+      <div className="supportPage">
+        <FAQ />
+        <FreeTrial />
+      </div>
     </>
   );
 };

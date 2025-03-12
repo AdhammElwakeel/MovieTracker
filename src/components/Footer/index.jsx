@@ -52,13 +52,13 @@ const Footer = () => {
             <h4>Connect With Us</h4>
             <p>hallo@prodmast.com</p>
             <div className="socialIcons">
-              <i class="fa-brands fa-linkedin"></i>
-              <i class="fa-brands fa-facebook"></i>
-              <i class="fa-brands fa-instagram"></i>
+              <i className="fa-brands fa-linkedin"></i>
+              <i className="fa-brands fa-facebook"></i>
+              <i className="fa-brands fa-instagram"></i>
             </div>
           </div>
         </div>
-        <div class="customLine"></div>
+        <div className="customLine"></div>
         <div className="footer-bottom">
           <p>© 2025 tawkeel, All rights reserved</p>
           <div className="terms">

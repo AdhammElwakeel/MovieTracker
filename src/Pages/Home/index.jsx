@@ -12,8 +12,8 @@ const Home = () => {
     <div className="home">
       <Poster />
       <div className="page">
-        <Devices />
         <Categories />
+        <Devices />
         <FAQ />
         <Plans />
         <Freetrial />

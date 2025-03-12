@@ -13,15 +13,7 @@
 
     line-height: 150%;
 }
-.placeholder-image {
-    width: 100px;
-    height: 100px;
 
-    border-radius: 12px;
-    border: 1px solid #262626;
-
-    background-color: #333;
-}
 .categories-header p {
     color: #999;
 
@@ -54,20 +46,22 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-
-    background: linear-gradient(
-        180deg,
-        rgba(26, 26, 26, 0) 0%,
-        #1a1a1a 101.79%
-    );
+    gap: 8px;
 }
 .images-section img {
     border-radius: 12px;
     border: 1px solid #262626;
 
     width: 12vh;
-    height: 12vh;
+    height: 18vh;
+    object-fit: contain;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
+
 .categories-card h3 {
     color: #fff;
 
@@ -82,4 +76,75 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+.error-message {
+    background-color: rgba(255, 59, 48, 0.1);
+    border-left: 4px solid #ff3b30;
+    color: #ff3b30;
+    padding: 16px 20px;
+    border-radius: 8px;
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.error-message::before {
+    content: "!";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: #ff3b30;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 12px;
+    font-weight: 700;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    width: 100%;
+    min-height: 200px;
+    position: relative;
+}
+
+.loading::after {
+    content: "";
+    width: 48px;
+    height: 48px;
+    border: 3px solid #333;
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: loading-spin 1s linear infinite;
+}
+
+@keyframes loading-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+@media (max-width: 768px) {
+    .images-section img {
+        width: 21vh;
+        height: unset;
+    }
+    .categories-card {
+    }
+}
+@media (max-width: 425px) {
+    .images-section img {
+        width: 100%;
+        height: unset;
+    }
+    .categories-card {
+        width: 100%;
+    }
 }

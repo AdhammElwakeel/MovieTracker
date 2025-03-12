@@ -2,27 +2,36 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./Pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import MoviesShows from "./Pages/MoviesShows";
+import Shows from "./Pages/Shows";
 import Subscriptions from "./Pages/Subscriptions";
 import Support from "./Pages/Support";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function App() {
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        staleTime: 1000 * 60 * 5,
+        cacheTime: 1000 * 60 * 10,
+        retry: 2,
+      },
+    },
+  });
+
   return (
-    <div className="App">
-      <>
+    <QueryClientProvider client={queryClient}>
+      <div className="App">
         <Router>
-          <div>
-            <Navbar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/movies-shows" element={<MoviesShows />} />
-              <Route path="/support" element={<Support />} />
-              <Route path="/subscriptions" element={<Subscriptions />} />
-            </Routes>
-          </div>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/movies-shows" element={<Shows />} />
+            <Route path="/support" element={<Support />} />
+            <Route path="/subscriptions" element={<Subscriptions />} />
+          </Routes>
         </Router>
-      </>
-    </div>
+      </div>
+    </QueryClientProvider>
   );
 }
 

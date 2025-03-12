@@ -10,6 +10,9 @@ const Categories = () => {
   if (error) {
     return <div className="error-message">{error}</div>;
   }
+  if (isLoading) {
+    return <div className="loading"> </div>;
+  }
 
   return (
     <>

@@ -1,64 +1,46 @@
-import { useState, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
+
+const BASE_URL = "https://api.themoviedb.org/3";
+const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
+const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
+
+const fetchMoviesByGenre = async ({ id, name }) => {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/discover/movie`, {
+      params: {
+        api_key: API_KEY,
+        language: "en-US",
+        sort_by: "popularity.desc",
+        with_genres: id,
+        page: 1,
+      },
+    });
+
+    return {
+      name,
+      images: data.results
+        .slice(0, 4)
+        .map((movie) => `${IMAGE_BASE_URL}${movie.poster_path}`),
+    };
+  } catch (error) {
+    console.error(`Error fetching ${name} movies:`, error);
+    throw new Error(`Failed to fetch ${name}: ${error.message}`);
+  }
+};
 
 const useMoviesByGenre = (genreIds) => {
-  const [categories, setCategories] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const {
+    data: categories = [],
+    isLoading,
+    error,
+  } = useQuery({
+    queryKey: ["movies-by-genre", genreIds],
+    queryFn: () => Promise.all(genreIds.map(fetchMoviesByGenre)),
+    enabled: genreIds?.length > 0,
+  });
 
-  const fetchMoviesByGenre = async (genreId, genreName) => {
-    try {
-      const response = await fetch(
-        `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=${genreId}`,
-        {
-          headers: {
-            Authorization: `Bearer ${process.env.REACT_APP_TMDB_API_KEY}`,
-            accept: "application/json",
-          },
-        },
-      );
-
-      if (!response.ok) {
-        throw new Error(`Failed to fetch data for genre ${genreName}`);
-      }
-
-      const data = await response.json();
-      const moviePosters = data.results
-        .slice(0, 4)
-        .map((movie) => `https://image.tmdb.org/t/p/w500${movie.poster_path}`);
-
-      return {
-        name: genreName,
-        images: moviePosters,
-      };
-    } catch (error) {
-      console.error(`Error fetching ${genreName} movies:`, error);
-      return {
-        name: genreName,
-        images: [],
-      };
-    }
-  };
-
-  useEffect(() => {
-    const fetchAllCategories = async () => {
-      setIsLoading(true);
-      try {
-        const categoriesData = await Promise.all(
-          genreIds.map((genre) => fetchMoviesByGenre(genre.id, genre.name)),
-        );
-
-        setCategories(categoriesData);
-        setIsLoading(false);
-      } catch (error) {
-        setError("Failed to fetch categories data. Please try again later.");
-        setIsLoading(false);
-      }
-    };
-
-    fetchAllCategories();
-  }, [genreIds]);
-
-  return { categories, isLoading, error };
+  return { categories, isLoading, error: error?.message || null };
 };
 
 export default useMoviesByGenre;

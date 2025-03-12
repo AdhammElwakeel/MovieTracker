@@ -1,7 +1,13 @@
+import "./Subscriptions.css";
+import Plans from "../../components/Plans";
+import FreeTrial from "../../components/FreeTrial";
 const Subscriptions = () => {
   return (
     <>
-      <h2>subs</h2>
+      <div className="subscriptionPage">
+        <Plans />
+        <FreeTrial />
+      </div>
     </>
   );
 };
