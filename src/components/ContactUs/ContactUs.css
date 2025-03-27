@@ -1,0 +1,236 @@
+.ContactUsPage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.ContactUs-left {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 50px;
+}
+
+.contactUsTitle {
+    display: grid;
+    gap: 14px;
+}
+
+.contactUsTitle h2 {
+    color: var(--Absolute-White, #fff);
+    font-family: Manrope;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 72px */
+}
+
+.contactUsTitle p {
+    color: var(--Grey-60, #999);
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.posterPhoto img {
+    width: 70%;
+}
+
+.contact-form-container {
+    border-radius: 12px;
+    border: 1px solid var(--Black-15, #262626);
+    background: var(--Black-06, #0f0f0f);
+    padding: 50px;
+}
+
+.ContactUs-right {
+    display: grid;
+    place-items: center;
+}
+
+.form-container {
+    display: grid;
+    padding: 40px;
+    gap: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--Black-15, #262626);
+    background: var(--Black-06, #0f0f0f);
+    width: 100%;
+}
+
+form {
+    display: grid;
+    gap: 40px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+label {
+    color: var(--Absolute-White, #fff);
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+}
+
+.form-group {
+    display: grid;
+    gap: 12px;
+}
+.phone-input-container {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+#country-code {
+    display: flex;
+    align-self: center;
+    padding: 0 8px;
+    border-radius: 6px;
+    border: 1px solid var(--Black-15, #262626);
+    background: var(--Black-08, #141414);
+    color: #fff;
+    height: 48px;
+    font-size: 25px;
+}
+
+.phone-input {
+    border-radius: 6px;
+    border: 1px solid var(--Black-15, #262626);
+    background: var(--Black-08, #141414);
+    padding: 16px;
+    flex: 1;
+}
+
+/* Remove these conflicting styles */
+.phone-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.label-type {
+    border-radius: 6px;
+    border: 1px solid var(--Black-15, #262626);
+    background: var(--Black-08, #141414);
+    padding: 16px;
+    color: white;
+}
+
+.form-footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items: center;
+}
+.label-term {
+    color: var(--Grey-60, #999);
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+#terms {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: 1px solid var(--Black-15, #262626);
+    background: var(--Black-06, #0f0f0f);
+}
+.submit-button {
+    border-radius: 6px;
+    background: var(--Red-45, #e50000);
+    padding: 14px 20px;
+    border: none;
+    color: #fff;
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 21px */
+}
+@media (max-width: 992px) {
+    .ContactUsPage {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contactUsTitle h2 {
+        font-size: 36px;
+    }
+
+    .posterPhoto img {
+        max-width: 300px;
+    }
+
+    .form-container {
+        padding: 30px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-footer {
+        grid-template-columns: 1fr;
+    }
+
+    .contactUsTitle h2 {
+        font-size: 30px;
+    }
+
+    .contactUsTitle p {
+        font-size: 16px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    form {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ContactUsPage {
+        padding: 15px;
+        gap: 30px;
+    }
+
+    .contactUsTitle h2 {
+        font-size: 24px;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    .label-term {
+        font-size: 14px;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+}

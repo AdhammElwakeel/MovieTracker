@@ -1,0 +1,130 @@
+.movies-details-page {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+.pageDetails {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.movie-information {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 70%;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    border-radius: 12px;
+    border: 1px solid var(--Black-15, #262626);
+    background: var(--Black-10, #1a1a1a);
+
+    padding: 20px;
+}
+.reviews-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+}
+.review-title h6 {
+    color: var(--Grey-60, #999);
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 27px */
+}
+.add-review-button .add-review {
+    display: flex;
+
+    gap: 4px;
+
+    border-radius: 8px;
+    border: 1px solid var(--Black-15, #262626);
+    background: var(--Black-08, #141414);
+    padding: 14px 16px;
+
+    color: var(--Absolute-White, #fff);
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 153%; /* 27.54px */
+}
+.review-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    border-radius: 12px;
+    border: 1px solid var(--Black-15, #262626);
+    background: var(--Black-06, #0f0f0f);
+
+    max-width: 360px;
+    padding: 40px;
+}
+.container-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 41px;
+}
+.author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.author-info .author-name h6 {
+    color: var(--Absolute-White, #fff);
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 30px */
+}
+.rating {
+    border-radius: 51px;
+    border: 1px solid var(--Black-15, #262626);
+    background: var(--Black-08, #141414);
+    padding: 6px 10px;
+}
+.author-nation {
+    color: var(--Grey-60, #999);
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 27px */
+}
+.review p {
+    color: var(--Grey-60, #999);
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+}
+.movie-data {
+    border-radius: 12px;
+    border: 1px solid var(--Black-15, #262626);
+    background: var(--Black-10, #1a1a1a);
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    width: 20%;
+}
