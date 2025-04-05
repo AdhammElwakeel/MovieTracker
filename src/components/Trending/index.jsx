@@ -4,9 +4,10 @@ import Seasons from "../../assets/icons/Seasons";
 import ChevronRight from "../../assets/icons/chevron-right";
 import fetchTrendingMovies from "../../Hooks/useTrending";
 import Star from "../../assets/icons/Star";
-
+import { useNavigate } from "react-router-dom";
 const Trending = ({ mediaType = "movie", title = "Trending Now" }) => {
   const { media, isLoading, error } = fetchTrendingMovies(mediaType);
+  const navigate = useNavigate();
 
   if (error) {
     return <div className="error-message">{error}</div>;
@@ -47,7 +48,15 @@ const Trending = ({ mediaType = "movie", title = "Trending Now" }) => {
       <div className="trending-cards-container">
         <div className="trending-cards" id={`trending-slider-${mediaType}`}>
           {media.map((item) => (
-            <div className="trending-card" key={item.id}>
+            <div
+              className="trending-card"
+              key={item.id}
+              onClick={() => {
+                navigate(
+                  `/${mediaType === "tv" ? "series" : "movie"}/${item.id}`,
+                );
+              }}
+            >
               <div
                 className="poster-img"
                 style={{

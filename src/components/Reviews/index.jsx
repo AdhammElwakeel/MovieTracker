@@ -1,6 +1,5 @@
 import "./Reviews.css";
 import Star from "../../assets/icons/Star";
-import Plus from "../../assets/icons/Plus";
 
 const Reviews = () => {
   return (
@@ -9,11 +8,6 @@ const Reviews = () => {
         <div className="reviews-head">
           <div className="review-title">
             <h6>Reviews</h6>
-          </div>
-          <div className="add-review-button">
-            <button className="add-review">
-              <Plus /> add your review
-            </button>
           </div>
         </div>
 

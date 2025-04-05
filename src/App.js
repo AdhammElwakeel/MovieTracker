@@ -7,6 +7,7 @@ import Subscriptions from "./Pages/Subscriptions";
 import Support from "./Pages/Support";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import MovieDetails from "./Pages/MoviesOpenPage";
+import SeriesDetails from "./Pages/SeriesDetails";
 function App() {
   const queryClient = new QueryClient({
     defaultOptions: {
@@ -28,7 +29,8 @@ function App() {
             <Route path="/movies-shows" element={<Shows />} />
             <Route path="/support" element={<Support />} />
             <Route path="/subscriptions" element={<Subscriptions />} />
-            <Route path="/Movie-details" element={<MovieDetails />} />
+            <Route path="/movie/:id" element={<MovieDetails />} />
+            <Route path="/series/:id" element={<SeriesDetails />} />
           </Routes>
         </Router>
       </div>

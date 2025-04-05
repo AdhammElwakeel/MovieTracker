@@ -1,14 +1,10 @@
 import "./Description.css";
-const Description = () => {
+const Description = ({ text }) => {
   return (
     <>
       <div className="description">
         <h6>Description</h6>
-        <p>
-          A fiery young man clashes with an unflinching forest officer in a
-          south Indian village where spirituality, fate and folklore rule the
-          lands.
-        </p>
+        <p>{text || "No description available"}</p>
       </div>
     </>
   );

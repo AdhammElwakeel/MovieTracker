@@ -43,10 +43,10 @@
 }
 .FAQ-card {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
     position: relative;
-    padding: 16px;
+    padding: 16px 16px 36px 16px;
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
