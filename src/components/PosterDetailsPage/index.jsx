@@ -50,7 +50,7 @@ const PosterDetailsPage = () => {
               backgroundPosition: "center ",
             }}
           ></div>
-          <div className="poster-content">
+          <div className="poster-content-movie">
             <div className="poster-text">
               <h2 className="poster-title">{details.title}</h2>
               {details.tagline && (
