@@ -74,6 +74,11 @@ nav {
     border-radius: 3px;
     transition: all 0.3s ease-in-out;
 }
+
+.navigation-menu {
+    z-index: 2;
+}
+
 .navbar-icons svg {
     width: 42px;
     height: 42px;
