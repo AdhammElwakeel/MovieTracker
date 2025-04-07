@@ -50,3 +50,8 @@
     opacity: 0.8;
     margin-bottom: 1rem;
 }
+@media (max-width: 540px) {
+    .poster-details-slider {
+        height: 40vh;
+    }
+}
