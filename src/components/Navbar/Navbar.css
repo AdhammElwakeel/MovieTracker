@@ -6,7 +6,6 @@ nav {
     width: 90%;
     margin: 0 auto;
     position: relative;
-    padding: 10px;
 }
 .icon-image {
     width: 32px;
@@ -77,6 +76,7 @@ nav {
 
 .navigation-menu {
     z-index: 2;
+    transition: all 0.3s ease-in-out;
 }
 
 .navbar-icons svg {
@@ -89,11 +89,13 @@ nav {
         display: block;
         z-index: 2;
     }
+
     .navbar-icons {
         display: none;
     }
 
     nav {
+        width: 100%;
         min-height: 60px;
     }
 
@@ -104,15 +106,14 @@ nav {
         width: 100%;
         background: #0f0f0f;
         padding: 0;
-        display: none;
-    }
-    .navbar-icons svg {
-        width: 42px;
-        height: 42px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+        display: block;
     }
 
     .navigation-menu.expanded {
-        display: block;
+        max-height: 500px;
     }
 
     .navbar-links {
@@ -132,11 +133,5 @@ nav {
 
     .navbar-icons {
         z-index: 2;
-    }
-    .poster .poster-heading-text p {
-        font-size: 10px;
-    }
-    .poster .poster-heading-text h3 {
-        font-size: 30px;
     }
 }

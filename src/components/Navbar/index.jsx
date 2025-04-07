@@ -19,7 +19,7 @@ const Navbar = () => {
       </div>
 
       <button
-        className="nav-expanded"
+        className={`nav-expanded ${isNavExpanded ? "active" : ""}`}
         onClick={() => setIsNavExpanded((isNavExpanded) => !isNavExpanded)}
         aria-label="Toggle Navigation"
       >
