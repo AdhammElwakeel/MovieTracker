@@ -41,6 +41,14 @@
         width: 50%;
     }
 }
+@media (max-width: 576px) {
+    .movie-information {
+        width: 100%;
+    }
+    .movie-data {
+        width: 85%;
+    }
+}
 @media (max-width: 375px) {
     .reviews {
         display: none;
