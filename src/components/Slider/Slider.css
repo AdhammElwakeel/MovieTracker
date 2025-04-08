@@ -122,13 +122,18 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 35px;
-    color: black;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(15, 15, 15, 0.7);
+    border: 1px solid #262626;
+    border-radius: 50%;
+    color: #fff;
     cursor: pointer;
     z-index: 10;
-    transition:
-        color 0.3s ease,
-        transform 0.2s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 .custom-prev {
@@ -139,22 +144,23 @@
     right: 10px;
 }
 
-.custom-prev::after,
-.custom-next::after {
-    content: "";
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.2s ease-in-out;
+.custom-prev {
+    left: 20px;
 }
 
-.custom-prev:hover::after,
-.custom-next:hover::after {
-    transform: translate(-50%, -50%) scale(1);
+.custom-next {
+    right: 20px;
+}
+
+.custom-prev:hover,
+.custom-next:hover {
+    background-color: var(--Red-45, #e50000);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.custom-prev::after,
+.custom-next::after {
+    content: none;
 }
 
 @keyframes loading-animation {
@@ -174,9 +180,20 @@
     .slide-overlay {
         position: unset;
     }
+    .custom-prev,
+    .custom-next {
+        width: 35px;
+        height: 35px;
+        top: 97%;
+    }
 }
 @media (max-width: 500px) {
     .slide-background {
         height: 300px;
+    }
+    .custom-prev,
+    .custom-next {
+        width: 30px;
+        height: 30px;
     }
 }
