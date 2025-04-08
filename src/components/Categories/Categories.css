@@ -136,7 +136,8 @@
         width: 21vh;
         height: unset;
     }
-    .categories-card {
+    .categories-header h2 {
+        font-size: 30px;
     }
 }
 @media (max-width: 425px) {

@@ -58,13 +58,19 @@
     border-radius: 8px;
     cursor: pointer;
 }
+@media (max-width: 768px) {
+    .poster img {
+        height: 40vh;
+    }
+    .poster .poster-heading-text h3 {
+        font-size: 30px;
+    }
+}
 @media screen and (width: 390px) and (height: 844px) {
     .poster .poster-heading-text h3 {
         font-size: 40px;
     }
-    .poster img {
-        height: 40vh;
-    }
+
     .poster .poster-heading-text p {
         font-size: 14px;
     }
