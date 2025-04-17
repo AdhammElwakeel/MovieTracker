@@ -8,6 +8,9 @@ import Support from "./Pages/Support";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import MovieDetails from "./Pages/MoviesOpenPage";
 import SeriesDetails from "./Pages/SeriesDetails";
+import Top10Movies from "./Pages/Top10Movies";
+import Search from "./Pages/Search";
+
 function App() {
   const queryClient = new QueryClient({
     defaultOptions: {
@@ -31,6 +34,8 @@ function App() {
             <Route path="/subscriptions" element={<Subscriptions />} />
             <Route path="/movie/:id" element={<MovieDetails />} />
             <Route path="/series/:id" element={<SeriesDetails />} />
+            <Route path="/top10-movies" element={<Top10Movies />} />
+            <Route path="/search" element={<Search />} />
           </Routes>
         </Router>
       </div>

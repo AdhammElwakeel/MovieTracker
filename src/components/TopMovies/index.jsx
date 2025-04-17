@@ -1,10 +1,17 @@
 import "./TopMovies.css";
 import Right from "../../assets/icons/Right";
+import { useNavigate } from "react-router-dom";
 
 const TopItems = ({ title, categories = [], isLoading, error }) => {
+  const navigate = useNavigate();
+
   if (error) {
     return <div className="top-items__error">{error}</div>;
   }
+
+  const handleNavigateToTop10 = () => {
+    navigate('/top10-movies');
+  };
 
   return (
     <>
@@ -16,7 +23,11 @@ const TopItems = ({ title, categories = [], isLoading, error }) => {
           <p className="top-items__loading">Loading categories...</p>
         ) : categories.length > 0 ? (
           categories.map((category, index) => (
-            <div className="item-card" key={index}>
+            <div 
+              className="item-card" 
+              key={index} 
+              onClick={handleNavigateToTop10}
+            >
               <div className="item-card__images">
                 {category.images.length > 0
                   ? category.images
