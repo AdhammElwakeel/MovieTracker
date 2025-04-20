@@ -1,4 +1,4 @@
-nav {
+.navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -7,12 +7,13 @@ nav {
     margin: 0 auto;
     position: relative;
 }
-.icon-image {
+
+.navbar .icon-image {
     width: 32px;
     height: 32px;
 }
 
-.navbar-links {
+.navbar .navbar-links {
     display: flex;
     flex-direction: row;
     border-radius: 12px;
@@ -23,7 +24,7 @@ nav {
     list-style: none;
 }
 
-.navbar-links li a {
+.navbar .navbar-links li a {
     color: #bfbfbf;
     font-family: Manrope;
     font-size: 18px;
@@ -35,21 +36,27 @@ nav {
         padding 0.3s,
         border-radius 0.3s;
 }
-.navbar-links .active {
+
+.navbar .navbar-links .active {
     border-radius: 8px;
     border: 1px solid var(--Black-10, #1a1a1a);
     background: var(--Black-10, #1a1a1a);
     padding: 5px 15px;
 }
 
-.navbar-icons {
+.navbar .navbar-icons {
     display: flex;
     flex-direction: row;
     gap: 30px;
     padding-top: 20px;
 }
 
-.nav-expanded {
+.navbar .navbar-icons svg {
+    width: 42px;
+    height: 42px;
+}
+
+.navbar .nav-expanded {
     display: none;
     border: none;
     background: none;
@@ -64,7 +71,7 @@ nav {
     margin-top: -12px;
 }
 
-.nav-expanded span {
+.navbar .nav-expanded span {
     display: block;
     width: 100%;
     height: 3px;
@@ -74,33 +81,28 @@ nav {
     transition: all 0.3s ease-in-out;
 }
 
-.navigation-menu {
+.navbar .navigation-menu {
     z-index: 2;
     transition: all 0.3s ease-in-out;
 }
 
-.navbar-icons svg {
-    width: 42px;
-    height: 42px;
-}
-
 @media screen and (max-width: 768px) {
-    .nav-expanded {
+    .navbar .nav-expanded {
         display: block;
         z-index: 2;
     }
 
-    .navbar-icons {
+    .navbar .navbar-icons {
         display: none;
     }
 
-    nav {
+    .navbar {
         width: 100%;
         min-height: 60px;
         padding: 10px;
     }
 
-    .navigation-menu {
+    .navbar .navigation-menu {
         position: absolute;
         top: 100%;
         left: 0;
@@ -113,11 +115,11 @@ nav {
         display: block;
     }
 
-    .navigation-menu.expanded {
+    .navbar .navigation-menu.expanded {
         max-height: 500px;
     }
 
-    .navbar-links {
+    .navbar .navbar-links {
         flex-direction: column;
         width: 100%;
         margin: 0;
@@ -128,11 +130,11 @@ nav {
         align-items: center;
     }
 
-    .navbar-links li {
+    .navbar .navbar-links li {
         text-align: center;
     }
 
-    .navbar-icons {
+    .navbar .navbar-icons {
         z-index: 2;
     }
 }

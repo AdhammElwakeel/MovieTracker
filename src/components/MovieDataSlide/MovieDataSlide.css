@@ -1,14 +1,16 @@
-.release-year-header {
-    display: flex;
-    flex-direction: row;
-    gap: 4px;
-}
 .movie-release-year {
     display: flex;
     flex-direction: column;
     gap: 14px;
 }
-.release-year-header p {
+
+.movie-release-year .release-year-header {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.movie-release-year .release-year-header p {
     color: var(--Grey-60, #999);
     font-family: Manrope;
     font-size: 18px;
@@ -16,6 +18,7 @@
     font-weight: 500;
     line-height: 150%; /* 27px */
 }
+
 .movie-release-year h6 {
     color: var(--Absolute-White, #fff);
     font-family: Manrope;
@@ -30,12 +33,14 @@
     flex-direction: column;
     gap: 14px;
 }
+
 .Available-Language .title {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 4px;
 }
+
 .Available-Language .title h6 {
     color: var(--Grey-60, #999);
     font-family: Manrope;
@@ -44,7 +49,8 @@
     font-weight: 500;
     line-height: 150%; /* 27px */
 }
-.Language-support {
+
+.Available-Language .Language-support {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -52,14 +58,15 @@
     flex-wrap: wrap;
     max-width: 500px;
 }
-.language {
+
+.Available-Language .Language-support .language {
     border-radius: 8px;
     border: 1px solid var(--Black-15, #262626);
     background: var(--Black-08, #141414);
-
     padding: 8px 14px;
 }
-.language p {
+
+.Available-Language .Language-support .language p {
     color: var(--Absolute-White, #fff);
     font-family: Manrope;
     font-size: 18px;
@@ -67,18 +74,21 @@
     font-weight: 500;
     line-height: 150%; /* 27px */
 }
-.Ratings {
+
+.Available-Language .Ratings {
     display: flex;
     flex-direction: column;
     gap: 14px;
 }
-.ratingTitle {
+
+.Available-Language .Ratings .ratingTitle {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 4px;
 }
-.ratingTitle p {
+
+.Available-Language .Ratings .ratingTitle p {
     color: var(--Grey-60, #999);
     font-family: Manrope;
     font-size: 18px;
@@ -86,19 +96,22 @@
     font-weight: 500;
     line-height: 150%; /* 27px */
 }
-.rating-container {
+
+.Available-Language .Ratings .rating-container {
     display: flex;
     flex-direction: row;
     gap: 10px;
     flex-wrap: wrap;
 }
-.rating-box {
+
+.Available-Language .Ratings .rating-container .rating-box {
     border-radius: 8px;
     border: 1px solid var(--Black-15, #262626);
     background: var(--Black-08, #141414);
     padding: 20px;
 }
-.rating-box-title p {
+
+.Available-Language .Ratings .rating-container .rating-box .rating-box-title p {
     color: var(--Absolute-White, #fff);
     font-family: Manrope;
     font-size: 15px;
@@ -106,18 +119,32 @@
     font-weight: 600;
     line-height: 150%; /* 30px */
 }
-.star-count {
+
+.Available-Language .Ratings .rating-container .rating-box .star-count {
     display: flex;
     flex-direction: row;
     gap: 4px;
     align-items: center;
 }
-.star-rate {
+
+.Available-Language
+    .Ratings
+    .rating-container
+    .rating-box
+    .star-count
+    .star-rate {
     display: flex;
     flex-direction: row;
     gap: 5px;
 }
-.rate-count p {
+
+.Available-Language
+    .Ratings
+    .rating-container
+    .rating-box
+    .star-count
+    .rate-count
+    p {
     color: var(--Absolute-White, #fff);
     font-family: Manrope;
     font-size: 15px;
@@ -125,18 +152,21 @@
     font-weight: 500;
     line-height: 150%; /* 30px */
 }
-.genre {
+
+.Available-Language .genre {
     display: flex;
     flex-direction: column;
     gap: 14px;
 }
-.genre-title {
+
+.Available-Language .genre .genre-title {
     display: flex;
     flex-direction: row;
     gap: 4px;
     align-items: center;
 }
-.genre-title p {
+
+.Available-Language .genre .genre-title p {
     color: var(--Grey-60, #999);
     font-family: Manrope;
     font-size: 18px;
@@ -144,20 +174,23 @@
     font-weight: 500;
     line-height: 150%; /* 27px */
 }
-.genre-container {
+
+.Available-Language .genre .genre-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
 }
-.genre-box {
+
+.Available-Language .genre .genre-container .genre-box {
     padding: 8px 14px;
     border-radius: 8px;
     border: 1px solid var(--Black-15, #262626);
     background: var(--Black-08, #141414);
 }
-.genre-box p {
+
+.Available-Language .genre .genre-container .genre-box p {
     color: var(--Absolute-White, #fff);
     font-family: Manrope;
     font-size: 18px;
@@ -165,12 +198,14 @@
     font-weight: 500;
     line-height: 150%; /* 27px */
 }
+
 .director-container {
     display: flex;
     flex-direction: column;
     gap: 14px;
 }
-.director-header p {
+
+.director-container .director-header p {
     color: var(--Grey-60, #999);
     font-family: Manrope;
     font-size: 18px;
@@ -178,33 +213,36 @@
     font-weight: 500;
     line-height: 150%; /* 27px */
 }
-.director-info {
+
+.director-container .director-info {
     border-radius: 8px;
     border: 1px solid var(--Black-15, #262626);
     background: var(--Black-08, #141414);
     padding: 14px;
-
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
 }
-.director-avatar {
+
+.director-container .director-info .director-avatar {
     width: 7vh;
     height: 7vh;
     background-size: cover;
     background-position: center;
     background-image: url(../../assets/images/director.png);
 }
-.director-name h6 {
+
+.director-container .director-info .director-name h6 {
     color: var(--Absolute-White, #fff);
     font-family: Manrope;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    line-height: 150%; /* 27px */
+    line-height: 150%;
 }
-.director-name p {
+
+.director-container .director-info .director-name p {
     color: var(--Grey-60, #999);
     font-family: Manrope;
     font-size: 16px;

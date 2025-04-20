@@ -5,13 +5,13 @@
     justify-content: center;
 }
 
-.plan-heading {
+.plan-container .plan-heading {
     display: flex;
     flex-direction: row;
     gap: 100px;
 }
 
-.plan-heading h2 {
+.plan-container .plan-heading h2 {
     color: #fff;
     font-family: Manrope;
     font-size: 38px;
@@ -19,7 +19,7 @@
     line-height: 150%;
 }
 
-.plan-heading p {
+.plan-container .plan-heading p {
     color: #999;
     font-family: Manrope;
     font-size: 18px;
@@ -67,7 +67,7 @@
     max-width: 400px;
 }
 
-.plan-price h2 {
+.plan-box .plan-price h2 {
     color: #fff;
     font-family: Manrope;
     font-size: 30px;
@@ -75,7 +75,7 @@
     line-height: 73%;
 }
 
-.plan-price h2 span {
+.plan-box .plan-price h2 span {
     color: #999;
     font-family: Manrope;
     font-size: 18px;
@@ -83,13 +83,13 @@
     line-height: 73%;
 }
 
-.box-buttons {
+.plan-box .box-buttons {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-.box-buttons button {
+.plan-box .box-buttons button {
     display: flex;
     justify-content: center;
     width: 50%;
@@ -105,19 +105,22 @@
     line-height: 150%;
 }
 
-.box-buttons .active {
+.plan-box .box-buttons .active {
     background: #e50000;
 }
+
 @media (max-width: 768px) {
     .plan-content {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 }
+
 @media (max-width: 600px) {
     .plan-content {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
-    .box-buttons button {
+
+    .plan-box .box-buttons button {
         font-size: 15px;
     }
 }

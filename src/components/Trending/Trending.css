@@ -5,13 +5,13 @@
     padding: 20px;
 }
 
-.trending-header {
+.trending-page .trending-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.trending-header h2 {
+.trending-page .trending-header h2 {
     color: var(--Absolute-White, #fff);
     font-family: Manrope, sans-serif;
     font-size: 38px;
@@ -19,12 +19,12 @@
     line-height: 1.5;
 }
 
-.slider-controls {
+.trending-page .slider-controls {
     display: flex;
     gap: 10px;
 }
 
-.slider-btn {
+.trending-page .slider-btn {
     background: var(--Black-10, #1a1a1a);
     border: 1px solid var(--Black-15, #262626);
     border-radius: 50%;
@@ -38,12 +38,12 @@
     font-size: 18px;
 }
 
-.trending-cards-container {
+.trending-page .trending-cards-container {
     overflow: hidden;
     width: 100%;
 }
 
-.trending-cards {
+.trending-page .trending-cards {
     display: flex;
     gap: 20px;
     overflow-x: auto;
@@ -52,16 +52,16 @@
     -webkit-overflow-scrolling: touch;
 }
 
-.trending-cards::-webkit-scrollbar {
+.trending-page .trending-cards::-webkit-scrollbar {
     display: none;
 }
 
-.trending-cards {
+.trending-page .trending-cards {
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
 
-.trending-card {
+.trending-page .trending-card {
     border-radius: 12px;
     border: 1px solid var(--Black-15, #262626);
     background: var(--Black-10, #1a1a1a);
@@ -74,11 +74,11 @@
     transition: transform 0.3s ease;
 }
 
-.trending-card:hover {
+.trending-page .trending-card:hover {
     transform: translateY(-5px);
 }
 
-.poster-img {
+.trending-page .poster-img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -87,14 +87,13 @@
     width: 100%;
 }
 
-.poster-details {
+.trending-page .poster-details {
     display: flex;
     justify-content: space-between;
 }
 
-/* Fixed selector syntax for these two classes */
-.movie-rating,
-.movie-info {
+.trending-page .movie-rating,
+.trending-page .movie-info {
     border-radius: 51px;
     border: 1px solid var(--Black-15, #262626);
     background: var(--Black-08, #141414);
@@ -109,7 +108,7 @@
     line-height: 1.5;
 }
 
-.error-message {
+.trending-page .error-message {
     background-color: rgba(255, 59, 48, 0.1);
     border-left: 4px solid #ff3b30;
     color: #ff3b30;
@@ -124,7 +123,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.error-message::before {
+.trending-page .error-message::before {
     content: "!";
     display: flex;
     align-items: center;
@@ -138,7 +137,7 @@
     font-weight: 700;
 }
 
-.loading {
+.trending-page .loading {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,7 +147,7 @@
     position: relative;
 }
 
-.loading::after {
+.trending-page .loading::after {
     content: "";
     width: 48px;
     height: 48px;
@@ -165,7 +164,7 @@
 }
 
 @media (max-width: 768px) {
-    .trending-header h2 {
+    .trending-page .trending-header h2 {
         font-size: 28px;
     }
 }

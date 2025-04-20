@@ -3,80 +3,74 @@
     flex-direction: column;
     gap: 14px;
 }
+
 .categories-header h2 {
     color: #fff;
-
     font-family: Manrope;
     font-size: 38px;
-    font-style: normal;
     font-weight: 700;
-
     line-height: 150%;
 }
 
 .categories-header p {
     color: #999;
-
     font-family: Manrope;
     font-size: 18px;
-    font-style: normal;
     font-weight: 400;
-
     line-height: 150%;
 }
+
 .categories-items {
     display: flex;
     flex-direction: row;
-    gap: 30px;
     flex-wrap: wrap;
+    gap: 30px;
 }
+
 .categories-card {
     display: flex;
     flex-direction: column;
     gap: 10px;
-
-    border-radius: 12px;
-    border: 1px solid #262626;
-
-    background: #1a1a1a;
-
     padding: 20px;
-}
-.images-section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 8px;
-}
-.images-section img {
     border-radius: 12px;
     border: 1px solid #262626;
-
-    width: 12vh;
-    height: 18vh;
-    object-fit: contain;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+    background: #1a1a1a;
 }
 
 .categories-card h3 {
     color: #fff;
-
     font-family: Manrope;
     font-size: 18px;
-    font-style: normal;
     font-weight: 600;
     line-height: 150%;
 }
+
 .categories-card .content-info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
+
+.images-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.images-section img {
+    width: 12vh;
+    height: 18vh;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 12px;
+    border: 1px solid #262626;
+}
+
 .error-message {
     background-color: rgba(255, 59, 48, 0.1);
     border-left: 4px solid #ff3b30;
@@ -131,21 +125,25 @@
         transform: rotate(360deg);
     }
 }
+
 @media (max-width: 768px) {
+    .categories-header h2 {
+        font-size: 30px;
+    }
+
     .images-section img {
         width: 21vh;
         height: unset;
     }
-    .categories-header h2 {
-        font-size: 30px;
-    }
 }
+
 @media (max-width: 425px) {
+    .categories-card {
+        width: 100%;
+    }
+
     .images-section img {
         width: 100%;
         height: unset;
-    }
-    .categories-card {
-        width: 100%;
     }
 }

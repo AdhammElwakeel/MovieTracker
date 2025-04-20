@@ -6,29 +6,29 @@ const TopItems = ({ title, categories = [], isLoading, error }) => {
   const navigate = useNavigate();
 
   if (error) {
-    return <div className="top-items__error">{error}</div>;
+    return <div className="top-items-error">{error}</div>;
   }
 
-  const handleNavigateToTop10 = () => {
-    navigate('/top10-movies');
+  const handleNavigateTopPage = () => {
+    navigate("/topmoviesPage");
   };
 
   return (
     <>
-      <div className="top-items__header">
-        <h2 className="top-items__title">{title}</h2>
+      <div className="top-items-header">
+        <h2 className="top-items-title">{title}</h2>
       </div>
-      <div className="top-items__grid">
+      <div className="top-items-grid">
         {isLoading ? (
-          <p className="top-items__loading">Loading categories...</p>
+          <p className="top-items-loading">Loading categories...</p>
         ) : categories.length > 0 ? (
           categories.map((category, index) => (
-            <div 
-              className="item-card" 
-              key={index} 
-              onClick={handleNavigateToTop10}
+            <div
+              className="item-card"
+              key={index}
+              onClick={handleNavigateTopPage}
             >
-              <div className="item-card__images">
+              <div className="item-card-images">
                 {category.images.length > 0
                   ? category.images
                       .slice(0, 4)
@@ -37,7 +37,7 @@ const TopItems = ({ title, categories = [], isLoading, error }) => {
                           key={imgIndex}
                           src={img.image}
                           alt={img.title}
-                          className="item-card__image"
+                          className="item-card-image"
                         />
                       ))
                   : Array(4)
@@ -45,23 +45,23 @@ const TopItems = ({ title, categories = [], isLoading, error }) => {
                       .map((_, imgIndex) => (
                         <div
                           key={imgIndex}
-                          className="item-card__image item-card__image--placeholder"
+                          className="item-card-image item-card-image-placeholder"
                         />
                       ))}
               </div>
-              <div className="item-card__content">
-                <div className="item-card__info">
-                  <div className="item-card__badge">
-                    <p className="item-card__badge-text">Top 10 In</p>
+              <div className="item-card-content">
+                <div className="item-card-info">
+                  <div className="item-card-badge">
+                    <p className="item-card-badge-text">Top 10 In</p>
                   </div>
-                  <h3 className="item-card__category">{category.name}</h3>
+                  <h3 className="item-card-category">{category.name}</h3>
                 </div>
                 <Right />
               </div>
             </div>
           ))
         ) : (
-          <p className="top-items__empty">No categories available</p>
+          <p className="top-items-empty">No categories available</p>
         )}
       </div>
     </>
