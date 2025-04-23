@@ -7,13 +7,11 @@ import FreeTrial from "../../components/FreeTrial";
 
 const Subscriptions = () => {
   return (
-    <>
-      <div className="subscriptionPage">
-        <Plans />
-        <PricingTable />
-        <FreeTrial />
-      </div>
-    </>
+    <div className="subscriptionPage">
+      <Plans />
+      <PricingTable />
+      <FreeTrial />
+    </div>
   );
 };
 export default Subscriptions;

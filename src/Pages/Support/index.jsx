@@ -7,13 +7,11 @@ import ContactUs from "../../components/ContactUs";
 
 const Support = () => {
   return (
-    <>
-      <div className="supportPage">
-        <ContactUs />
-        <FAQ />
-        <FreeTrial />
-      </div>
-    </>
+    <div className="supportPage">
+      <ContactUs />
+      <FAQ />
+      <FreeTrial />
+    </div>
   );
 };
 export default Support;

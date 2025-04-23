@@ -38,7 +38,7 @@ function App() {
             <Route path="/subscriptions" element={<Subscriptions />} />
             <Route path="/movie/:id" element={<MovieDetails />} />
             <Route path="/series/:id" element={<SeriesDetails />} />
-            <Route path="/top-movies-Page" element={<TopMoviesPage />} />
+            <Route path="/movies/top" element={<TopMoviesPage />} />
           </Routes>
         </Router>
       </div>

@@ -13,7 +13,7 @@ const TopItems = ({ title, categories = [], isLoading, error }) => {
   }
 
   const handleNavigateTopPage = () => {
-    navigate("/top-movies-Page");
+    navigate("/movies/top");
   };
 
   return (
