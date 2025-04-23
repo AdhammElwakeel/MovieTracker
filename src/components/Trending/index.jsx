@@ -7,7 +7,7 @@ import ChevronRightIcon from "../../assets/icons/chevron-right";
 import StarIcon from "../../assets/icons/Star";
 
 // hooks
-import fetchTrendingMovies from "../../Hooks/useTrending";
+import fetchTrendingMovies from "../../hooks/useTrending";
 import { useNavigate } from "react-router-dom";
 
 const Trending = ({ mediaType = "movie", title = "Trending Now" }) => {

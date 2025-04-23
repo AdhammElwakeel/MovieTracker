@@ -1,4 +1,4 @@
-import "./New_Relase.css";
+import "./NewRelease.css";
 
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
@@ -10,7 +10,7 @@ import ChevronRightIcon from "../../assets/icons/chevron-right";
 //hooks
 import useNewReleases from "../../hooks/useNewRelase";
 
-const NewRelase = ({ type = "movie" }) => {
+const NewRelease = ({ type = "movie" }) => {
   const { releases, isLoading, error } = useNewReleases(type);
   const sliderRef = useRef(null);
   const navigate = useNavigate();
@@ -79,4 +79,4 @@ const NewRelase = ({ type = "movie" }) => {
   );
 };
 
-export default NewRelase;
+export default NewRelease;

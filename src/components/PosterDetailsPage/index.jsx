@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import { useParams } from "react-router-dom";
 
 // hooks
-import useMovieDetails from "../../Hooks/useMovieDetails";
+import useMovieDetails from "../../hooks/useMovieDetails";
 
 const PosterDetailsPage = () => {
   const { id } = useParams();

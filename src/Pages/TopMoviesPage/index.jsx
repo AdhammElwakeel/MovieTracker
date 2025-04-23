@@ -1,7 +1,7 @@
 import "./TopMoviesPage.css";
 
 // hooks
-import useTopItems from "../../Hooks/useTopItem";
+import useTopItems from "../../hooks/useTopItem";
 
 // constants
 import { movieGenres } from "../../constants/genres";

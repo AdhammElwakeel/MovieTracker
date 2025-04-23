@@ -1,0 +1,194 @@
+.newMovies-page {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+.newMovies-page .newMovies-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newMovies-page .newMovies-header h2 {
+    color: var(--Absolute-White, #fff);
+    font-family: Manrope, sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.newMovies-page .slider-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.newMovies-page .slider-btn {
+    background: var(--Black-10, #1a1a1a);
+    border: 1px solid var(--Black-15, #262626);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
+
+.newMovies-page .newMovies-cards-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.newMovies-page .newMovies-cards {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.newMovies-page .newMovies-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.newMovies-page .newMovies-cards {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.newMovies-page .newMovies-card {
+    border-radius: 12px;
+    border: 1px solid var(--Black-15, #262626);
+    background: var(--Black-10, #1a1a1a);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    min-width: 200px;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+}
+
+.newMovies-page .newMovies-card:hover {
+    transform: translateY(-5px);
+}
+
+.newMovies-page .poster-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    height: 270px;
+    width: 100%;
+}
+
+.newMovies-page .poster-date-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px 6px 6px;
+    border-radius: 51px;
+    border: 1px solid var(--Black-15, #262626);
+    background: var(--Black-08, #141414);
+}
+
+.newMovies-page .date {
+    color: var(--Grey-60, #999);
+    text-align: center;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.newMovies-page .date span {
+    color: var(--Grey-75, #bfbfbf);
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.newMovies-page .movie-runtime,
+.newMovies-page .movie-seen {
+    border-radius: 51px;
+    border: 1px solid var(--Black-15, #262626);
+    background: var(--Black-08, #141414);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 6px 10px 6px 6px;
+    color: var(--Grey-60, #999);
+    font-family: Manrope, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.newMovies-page .error-message {
+    background-color: rgba(255, 59, 48, 0.1);
+    border-left: 4px solid #ff3b30;
+    color: #ff3b30;
+    padding: 16px 20px;
+    border-radius: 8px;
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.newMovies-page .error-message::before {
+    content: "!";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: #ff3b30;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 12px;
+    font-weight: 700;
+}
+
+.newMovies-page .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    width: 100%;
+    min-height: 200px;
+    position: relative;
+}
+
+.newMovies-page .loading::after {
+    content: "";
+    width: 48px;
+    height: 48px;
+    border: 3px solid #333;
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: loading-spin 1s linear infinite;
+}
+
+@keyframes loading-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .newMovies-page .trending-header h2 {
+        font-size: 28px;
+    }
+}

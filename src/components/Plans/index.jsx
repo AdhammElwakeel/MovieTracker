@@ -2,6 +2,7 @@ import "./Plans.css";
 
 // constants
 import { planData } from "../../constants/planData";
+
 const Plans = () => {
   return (
     <div className="plan-container">

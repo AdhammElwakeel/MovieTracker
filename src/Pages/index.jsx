@@ -3,7 +3,7 @@ import "./Shows.css";
 // components
 import Categories from "../../components/Categories";
 import FreeTrial from "../../components/FreeTrial";
-import NewRelase from "../../components/New_Relase";
+import NewRelease from "../../components/NewRelease";
 import Slider from "../../components/Slider";
 import Trending from "../../components/Trending";
 import TopItems from "../../components/TopMovies";
@@ -40,7 +40,7 @@ const Shows = () => {
           error={movieError}
         />
         <Trending />
-        <NewRelase />
+        <NewRelease />
       </div>
 
       <div className="Genres">
@@ -52,7 +52,7 @@ const Shows = () => {
           error={tvError}
         />
         <Trending mediaType="tv" title="Trending TV Shows" />
-        <NewRelase type="tv" />
+        <NewRelease type="tv" />
       </div>
       <FreeTrial />
     </div>

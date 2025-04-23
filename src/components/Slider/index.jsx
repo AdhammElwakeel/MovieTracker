@@ -12,7 +12,7 @@ import PlayIcon from "../../assets/icons/Play";
 import LikeIcon from "../../assets/icons/Like";
 
 // hooks
-import { useMovies } from "../../Hooks/usePopular";
+import { useMovies } from "../../hooks/usePopular";
 
 const MovieSlider = () => {
   const { movies, isLoading, error } = useMovies();

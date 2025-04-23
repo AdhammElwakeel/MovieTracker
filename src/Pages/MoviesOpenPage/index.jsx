@@ -9,7 +9,7 @@ import Description from "../../components/Description";
 import Reviews from "../../components/Reviews";
 
 // hooks
-import useMovieDetails from "../../Hooks/useMovieDetails";
+import useMovieDetails from "../../hooks/useMovieDetails";
 
 import { useParams } from "react-router-dom";
 

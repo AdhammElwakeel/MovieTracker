@@ -4,13 +4,13 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 
 // pages
-import Subscriptions from "./Pages/Subscriptions";
-import Support from "./Pages/Support";
-import Home from "./Pages/Home";
-import Shows from "./Pages/Shows";
-import MovieDetails from "./Pages/MoviesOpenPage";
-import SeriesDetails from "./Pages/SeriesDetails";
-import TopMoviesPage from "./Pages/TopMoviesPage";
+import Subscriptions from "./pages/Subscriptions";
+import Support from "./pages/Support";
+import Home from "./pages/Home";
+import Shows from "./pages/Shows";
+import MovieDetails from "./pages/MoviesOpenPage";
+import SeriesDetails from "./pages/SeriesDetails";
+import TopMoviesPage from "./pages/TopMoviesPage";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";

@@ -7,7 +7,7 @@ import RightIcon from "../../assets/icons/Right";
 import { genreIds } from "../../constants/genreIds";
 
 //hooks
-import useMoviesByGenre from "../../Hooks/useMoviesByGenre";
+import useMoviesByGenre from "../../hooks/useMoviesByGenre";
 
 const Categories = () => {
   const { categories, isLoading, error } = useMoviesByGenre(genreIds);
