@@ -1,6 +1,8 @@
 import "./Cast.css";
-import ChevronLeft from "../../assets/icons/chevron-left";
-import ChevronRight from "../../assets/icons/chevron-right";
+
+// Icons
+import ChevronLeftIcon from "../../assets/icons/chevron-left";
+import ChevronRightIcon from "../../assets/icons/chevron-right";
 
 const CastDetails = ({ cast = [] }) => {
   const scrollLeft = () => {
@@ -25,10 +27,10 @@ const CastDetails = ({ cast = [] }) => {
         </div>
         <div className="cast-slider-controls">
           <button className="cast-slider-btn" onClick={scrollLeft}>
-            <ChevronLeft />
+            <ChevronLeftIcon />
           </button>
           <button className="cast-slider-btn" onClick={scrollRight}>
-            <ChevronRight />
+            <ChevronRightIcon />
           </button>
         </div>
       </div>

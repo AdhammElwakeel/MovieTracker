@@ -1,10 +1,15 @@
 import "./Trending.css";
-import ChevronLeft from "../../assets/icons/chevron-left";
-import Seasons from "../../assets/icons/Seasons";
-import ChevronRight from "../../assets/icons/chevron-right";
+
+// icons
+import ChevronLeftIcon from "../../assets/icons/chevron-left";
+import SeasonsIcon from "../../assets/icons/Seasons";
+import ChevronRightIcon from "../../assets/icons/chevron-right";
+import StarIcon from "../../assets/icons/Star";
+
+// hooks
 import fetchTrendingMovies from "../../Hooks/useTrending";
-import Star from "../../assets/icons/Star";
 import { useNavigate } from "react-router-dom";
+
 const Trending = ({ mediaType = "movie", title = "Trending Now" }) => {
   const { media, isLoading, error } = fetchTrendingMovies(mediaType);
   const navigate = useNavigate();
@@ -37,10 +42,10 @@ const Trending = ({ mediaType = "movie", title = "Trending Now" }) => {
         <h2>{title}</h2>
         <div className="slider-controls">
           <button className="slider-btn" onClick={scrollLeft}>
-            <ChevronLeft />
+            <ChevronLeftIcon />
           </button>
           <button className="slider-btn" onClick={scrollRight}>
-            <ChevronRight />
+            <ChevronRightIcon />
           </button>
         </div>
       </div>
@@ -67,10 +72,10 @@ const Trending = ({ mediaType = "movie", title = "Trending Now" }) => {
 
               <div className="poster-details">
                 <div className="movie-rating">
-                  <Star /> {Math.round(item.vote_average)}
+                  <StarIcon /> {Math.round(item.vote_average)}
                 </div>
                 <div className="movie-info">
-                  <Seasons />{" "}
+                  <SeasonsIcon />{" "}
                   {mediaType === "tv"
                     ? `${item.number_of_seasons} Season${item.number_of_seasons !== 1 ? "s" : ""}`
                     : item.runtime}

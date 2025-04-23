@@ -121,7 +121,24 @@
     font-weight: 400;
     line-height: 150%;
 }
-
+.slider-controls {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.slider-controls .slider-btn {
+    background: #1a1a1a;
+    border: 1px solid #262626;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
 @media (max-width: 768px) {
     .reviews .review-container {
         min-width: 250px;

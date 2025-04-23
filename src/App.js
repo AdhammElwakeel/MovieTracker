@@ -1,14 +1,19 @@
 import "./App.css";
+
+// components
 import Navbar from "./components/Navbar";
-import Home from "./Pages/Home";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Shows from "./Pages/Shows";
+
+// pages
 import Subscriptions from "./Pages/Subscriptions";
 import Support from "./Pages/Support";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Home from "./Pages/Home";
+import Shows from "./Pages/Shows";
 import MovieDetails from "./Pages/MoviesOpenPage";
 import SeriesDetails from "./Pages/SeriesDetails";
 import TopMoviesPage from "./Pages/TopMoviesPage";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function App() {
   const queryClient = new QueryClient({
@@ -33,7 +38,7 @@ function App() {
             <Route path="/subscriptions" element={<Subscriptions />} />
             <Route path="/movie/:id" element={<MovieDetails />} />
             <Route path="/series/:id" element={<SeriesDetails />} />
-            <Route path="/topmoviesPage" element={<TopMoviesPage />} />
+            <Route path="/top-movies-Page" element={<TopMoviesPage />} />
           </Routes>
         </Router>
       </div>

@@ -1,7 +1,10 @@
 import "./Subscriptions.css";
+
+// components
 import Plans from "../../components/Plans";
 import PricingTable from "../../components/PricingTable";
 import FreeTrial from "../../components/FreeTrial";
+
 const Subscriptions = () => {
   return (
     <>

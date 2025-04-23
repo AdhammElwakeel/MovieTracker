@@ -1,11 +1,16 @@
+import "./MoviesOpenPage.css";
+
+// components
 import FreeTrial from "../../components/FreeTrial";
 import MovieDetailSlider from "../../components/PosterDetailsPage";
-import "./MoviesOpenPage.css";
 import MovieDataSlide from "../../components/MovieDataSlide";
 import CastDetails from "../../components/Cast";
 import Description from "../../components/Description";
 import Reviews from "../../components/Reviews";
+
+// hooks
 import useMovieDetails from "../../Hooks/useMovieDetails";
+
 import { useParams } from "react-router-dom";
 
 const MovieDetails = () => {

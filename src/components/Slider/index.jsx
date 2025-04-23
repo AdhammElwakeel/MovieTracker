@@ -1,12 +1,17 @@
+import "./Slider.css";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
-import "./Slider.css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Plus from "../../assets/icons/Plus";
-import Play from "../../assets/icons/Play";
-import Like from "../../assets/icons/Like";
+
+// icons
+import PlusIcon from "../../assets/icons/Plus";
+import PlayIcon from "../../assets/icons/Play";
+import LikeIcon from "../../assets/icons/Like";
+
+// hooks
 import { useMovies } from "../../Hooks/usePopular";
 
 const MovieSlider = () => {
@@ -46,13 +51,13 @@ const MovieSlider = () => {
               </div>
               <div className="options">
                 <button className="play-button">
-                  <Play /> Play Now
+                  <PlayIcon /> Play Now
                 </button>
                 <div className="icons">
-                  <Plus />
+                  <PlusIcon />
                 </div>
                 <div className="icons">
-                  <Like />
+                  <LikeIcon />
                 </div>
               </div>
             </div>

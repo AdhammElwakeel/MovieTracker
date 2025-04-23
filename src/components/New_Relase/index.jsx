@@ -1,9 +1,15 @@
+import "./New_Relase.css";
+
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import "./New_Relase.css";
-import ChevronLeft from "../../assets/icons/chevron-left";
-import ChevronRight from "../../assets/icons/chevron-right";
+
+// icons
+import ChevronLeftIcon from "../../assets/icons/chevron-left";
+import ChevronRightIcon from "../../assets/icons/chevron-right";
+
+//hooks
 import useNewReleases from "../../Hooks/useNewRelase";
+
 const NewRelase = ({ type = "movie" }) => {
   const { releases, isLoading, error } = useNewReleases(type);
   const sliderRef = useRef(null);
@@ -35,10 +41,10 @@ const NewRelase = ({ type = "movie" }) => {
         <h2>New Releases</h2>
         <div className="slider-controls">
           <button className="slider-btn" onClick={scrollLeft}>
-            <ChevronLeft />
+            <ChevronLeftIcon />
           </button>
           <button className="slider-btn" onClick={scrollRight}>
-            <ChevronRight />
+            <ChevronRightIcon />
           </button>
         </div>
       </div>

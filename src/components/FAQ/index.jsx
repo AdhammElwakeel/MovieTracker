@@ -1,13 +1,17 @@
-import Plus from "../../assets/icons/Plus";
-import Minus from "../../assets/icons/Minus";
 import "./FAQ.css";
+
+// icons
+import PlusIcon from "../../assets/icons/Plus";
+import MinusIcon from "../../assets/icons/Minus";
+
+// constant
 import { faqData } from "../../constants/FAQ";
 import { useState } from "react";
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openItemIndex, setOpenItemIndex] = useState(null);
   const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+    setOpenItemIndex(openItemIndex === index ? null : index);
   };
   return (
     <>
@@ -28,10 +32,10 @@ const FAQ = () => {
               <div className="item-number">{item.id}</div>
               <div className="item-text">
                 <h2>{item.question}</h2>
-                {openIndex === index && <p>{item.answer}</p>}
+                {openItemIndex === index && <p>{item.answer}</p>}
               </div>
               <div className="item-icon" onClick={() => toggleFAQ(index)}>
-                {openIndex === index ? <Minus /> : <Plus />}
+                {openItemIndex === index ? <MinusIcon /> : <PlusIcon />}
               </div>
             </div>
           ))}

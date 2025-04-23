@@ -1,3 +1,5 @@
+import "./PosterDetailsPage.css";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -5,9 +7,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { useParams } from "react-router-dom";
-import useMovieDetails from "../../Hooks/useMovieDetails";
 
-import "./PosterDetailsPage.css";
+// hooks
+import useMovieDetails from "../../Hooks/useMovieDetails";
 
 const PosterDetailsPage = () => {
   const { id } = useParams();

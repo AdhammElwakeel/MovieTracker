@@ -26,11 +26,10 @@
     line-height: 1.2;
 }
 
-.section-title p {
+.FAQ-section .section-header .section-title p {
     color: var(--Grey-60, #999);
     font-family: Manrope;
     font-size: 18px;
-    font-style: normal;
     font-weight: 400;
     line-height: 150%;
     max-width: 600px;
@@ -42,7 +41,6 @@
     color: var(--Absolute-White, #fff);
     font-family: Manrope;
     font-size: 18px;
-    font-style: normal;
     font-weight: 600;
     line-height: 150%;
     padding: 12px 24px;
@@ -88,8 +86,8 @@
     display: none;
 }
 
-.item-number {
-    padding: 20px;
+.FAQ-card .item-number {
+    padding: 3px;
     min-width: 60px;
     min-height: 60px;
     border-radius: 10px;
@@ -98,42 +96,38 @@
     color: var(--Absolute-White, #fff);
     font-family: Manrope;
     font-size: 20px;
-    font-style: normal;
     font-weight: 600;
-    line-height: normal;
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
 }
 
-.item-text {
+.FAQ-card .item-text {
     display: flex;
     flex-direction: column;
     gap: 20px;
     flex: 1;
 }
 
-.item-text h2 {
+.FAQ-card .item-text h2 {
     color: var(--Absolute-White, #fff);
     font-family: Manrope;
     font-size: 22px;
-    font-style: normal;
     font-weight: 500;
     line-height: 150%;
 }
 
-.item-text p {
+.FAQ-card .item-text p {
     animation: fadeIn 0.3s ease-in;
     color: var(--Grey-60, #999);
     font-family: Manrope;
     font-size: 18px;
-    font-style: normal;
     font-weight: 400;
     line-height: 150%;
 }
 
-.item-icon {
+.FAQ-card .item-icon {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -180,18 +174,18 @@
         padding: 16px 12px 30px 12px;
     }
 
-    .item-number {
+    .FAQ-card .item-number {
         padding: 15px;
         min-width: 50px;
         min-height: 50px;
         font-size: 18px;
     }
 
-    .item-text h2 {
+    .FAQ-card .item-text h2 {
         font-size: 18px;
     }
 
-    .item-text p {
+    .FAQ-card .item-text p {
         font-size: 16px;
     }
 }

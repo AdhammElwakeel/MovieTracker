@@ -3,13 +3,15 @@
     flex-direction: column;
     gap: 80px;
 }
-.section-title {
+
+.devices-page .section-title {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 14px;
 }
-.section-title h2 {
+
+.devices-page .section-title h2 {
     color: #fff;
     font-family: Manrope;
     font-size: 38px;
@@ -17,20 +19,24 @@
     font-weight: 700;
     line-height: 150%;
 }
-.section-title p {
+
+.devices-page .section-title p {
     color: #999;
     font-family: Manrope;
-    font-size: 15px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
+    max-width: 800px;
 }
-.section-box {
+
+.devices-page .section-box {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 30px;
 }
-.section-box .box {
+
+.devices-page .section-box .box {
     display: flex;
     flex-direction: column;
     padding: 30px;
@@ -44,13 +50,15 @@
         #0f0f0f;
     gap: 30px;
 }
-.section-box .box .box-heading {
+
+.devices-page .section-box .box .box-heading {
     display: flex;
     flex-direction: row;
     gap: 10px;
     align-items: center;
 }
-.box-heading h2 {
+
+.devices-page .section-box .box .box-heading h2 {
     color: #fff;
     font-family: Manrope;
     font-size: 24px;
@@ -58,7 +66,8 @@
     font-weight: 600;
     line-height: 150%;
 }
-.box-content p {
+
+.devices-page .section-box .box .box-content p {
     color: #999;
     font-family: Manrope;
     font-size: 18px;
@@ -67,14 +76,16 @@
     line-height: 150%;
     max-width: 360px;
 }
+
 @media (max-width: 1024px) {
-    .section-box {
+    .devices-page .section-box {
         flex-direction: column;
         justify-content: center;
     }
 }
+
 @media (max-width: 600px) {
-    .section-box {
+    .devices-page .section-box {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 }

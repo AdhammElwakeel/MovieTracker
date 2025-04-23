@@ -1,7 +1,9 @@
 import "./MovieDataSlide.css";
-import RelaaseYear from "../../assets/icons/releaseYear";
-import AvailableLanguages from "../../assets/icons/AvailableLanguages";
-import Star from "../../assets/icons/Star";
+
+// icons
+import RelaaseYearIcon from "../../assets/icons/releaseYear";
+import AvailableLanguagesIcon from "../../assets/icons/AvailableLanguages";
+import StarIcon from "../../assets/icons/Star";
 
 const MovieDataSlide = ({ movieDetails }) => {
   if (!movieDetails) return null;
@@ -19,7 +21,7 @@ const MovieDataSlide = ({ movieDetails }) => {
     const stars = [];
 
     for (let i = 0; i < normalizedRating; i++) {
-      stars.push(<Star key={i} />);
+      stars.push(<StarIcon key={i} />);
     }
 
     return stars;
@@ -29,7 +31,7 @@ const MovieDataSlide = ({ movieDetails }) => {
     <>
       <div className="movie-release-year">
         <div className="release-year-header">
-          <RelaaseYear />
+          <RelaaseYearIcon />
           <p>Released Year</p>
         </div>
         <h6>{releaseYear}</h6>
@@ -37,7 +39,7 @@ const MovieDataSlide = ({ movieDetails }) => {
 
       <div className="Available-Language">
         <div className="title">
-          <AvailableLanguages />
+          <AvailableLanguagesIcon />
           <h6>Available Languages</h6>
         </div>
 
@@ -51,7 +53,7 @@ const MovieDataSlide = ({ movieDetails }) => {
 
         <div className="Ratings">
           <div className="ratingTitle">
-            <Star stroke="#999" fill="none" />
+            <StarIcon stroke="#999" fill="none" />
             <p>Ratings</p>
           </div>
           <div className="rating-container">

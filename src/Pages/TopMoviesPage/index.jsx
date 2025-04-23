@@ -1,8 +1,14 @@
-import React from "react";
 import "./TopMoviesPage.css";
+
+// hooks
 import useTopItems from "../../Hooks/useTopItem";
+
+// constants
 import { movieGenres } from "../../constants/genres";
+
+//components
 import Footer from "../../components/Footer";
+
 import { useNavigate } from "react-router-dom";
 
 const TopMoviesPage = () => {

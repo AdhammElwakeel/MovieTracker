@@ -1,9 +1,12 @@
+import "./Navbar.css";
+
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../../assets/icons/logo";
+
+//icons
+import LogoIcon from "../../assets/icons/logo";
 import SearchIcon from "../../assets/icons/search";
-import Notification from "../../assets/icons/notification";
-import "./Navbar.css";
+import NotificationIcon from "../../assets/icons/notification";
 
 const Navbar = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -14,7 +17,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="icon-image">
         <NavLink to="/" onClick={closeMenu}>
-          <Logo />
+          <LogoIcon />
         </NavLink>
       </div>
 
@@ -78,7 +81,7 @@ const Navbar = () => {
           <SearchIcon />
         </NavLink>
         <NavLink to="/notifications" className="icon-link" onClick={closeMenu}>
-          <Notification />
+          <NotificationIcon />
         </NavLink>
       </div>
     </nav>

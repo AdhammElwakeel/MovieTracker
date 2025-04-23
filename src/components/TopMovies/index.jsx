@@ -1,5 +1,8 @@
 import "./TopMovies.css";
-import Right from "../../assets/icons/Right";
+
+// icons
+import RightIcon from "../../assets/icons/Right";
+
 import { useNavigate } from "react-router-dom";
 
 const TopItems = ({ title, categories = [], isLoading, error }) => {
@@ -10,7 +13,7 @@ const TopItems = ({ title, categories = [], isLoading, error }) => {
   }
 
   const handleNavigateTopPage = () => {
-    navigate("/topmoviesPage");
+    navigate("/top-movies-Page");
   };
 
   return (
@@ -56,7 +59,7 @@ const TopItems = ({ title, categories = [], isLoading, error }) => {
                   </div>
                   <h3 className="item-card-category">{category.name}</h3>
                 </div>
-                <Right />
+                <RightIcon />
               </div>
             </div>
           ))

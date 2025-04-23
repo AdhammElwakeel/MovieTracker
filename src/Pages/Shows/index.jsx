@@ -1,11 +1,17 @@
+import "./Shows.css";
+
+// components
 import Categories from "../../components/Categories";
 import FreeTrial from "../../components/FreeTrial";
 import NewRelase from "../../components/New_Relase";
 import Slider from "../../components/Slider";
 import Trending from "../../components/Trending";
-import { movieGenres, tvGenres } from "../../constants/genres";
 import TopItems from "../../components/TopMovies";
-import "./Shows.css";
+
+// constants
+import { movieGenres, tvGenres } from "../../constants/genres";
+
+// hooks
 import useTopItems from "../../Hooks/useTopItem";
 
 const Shows = () => {

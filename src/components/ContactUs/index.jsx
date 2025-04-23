@@ -1,5 +1,6 @@
-import { useState } from "react";
 import "./ContactUs.css";
+
+import { useState } from "react";
 import ContactUsPoster from "../../assets/images/support.png";
 
 const ContactUs = () => {

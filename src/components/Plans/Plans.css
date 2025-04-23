@@ -37,7 +37,7 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
-    padding: 50px;
+    padding: 48px;
     border-radius: 12px;
     border: 1px solid #262626;
     background: #1a1a1a;
@@ -83,13 +83,13 @@
     line-height: 73%;
 }
 
-.plan-box .box-buttons {
+.plan-box .plan-buttons {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-.plan-box .box-buttons button {
+.plan-box .plan-buttons button {
     display: flex;
     justify-content: center;
     width: 50%;
@@ -105,7 +105,7 @@
     line-height: 150%;
 }
 
-.plan-box .box-buttons .active {
+.plan-box .plan-buttons .primary {
     background: #e50000;
 }
 
@@ -120,7 +120,7 @@
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 
-    .plan-box .box-buttons button {
+    .plan-box .plan-buttons button {
         font-size: 15px;
     }
 }

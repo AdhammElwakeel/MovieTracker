@@ -1,7 +1,12 @@
-import React from "react";
-import Right from "../../assets/icons/Right";
 import "./Categories.css";
+
+// Icons
+import RightIcon from "../../assets/icons/Right";
+
+// constants
 import { genreIds } from "../../constants/genreIds";
+
+//hooks
 import useMoviesByGenre from "../../Hooks/useMoviesByGenre";
 
 const Categories = () => {
@@ -46,7 +51,7 @@ const Categories = () => {
               </div>
               <div className="content-info">
                 <h3>{category.name}</h3>
-                <Right />
+                <RightIcon />
               </div>
             </div>
           ))
