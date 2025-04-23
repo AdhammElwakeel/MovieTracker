@@ -1,0 +1,62 @@
+import "./Shows.css";
+
+// components
+import Categories from "../../components/Categories";
+import FreeTrial from "../../components/FreeTrial";
+import NewRelease from "../../components/NewRelease";
+import Slider from "../../components/Slider";
+import Trending from "../../components/Trending";
+import TopItems from "../../components/TopMovies";
+
+// constants
+import { movieGenres, tvGenres } from "../../constants/genres";
+
+// hooks
+import useTopItems from "../../hooks/useTopItem";
+
+const Shows = () => {
+  const {
+    categories: movieCategories,
+    isLoading: isLoadingMovies,
+    error: movieError,
+  } = useTopItems(movieGenres, "movie");
+
+  const {
+    categories: tvCategories,
+    isLoading: isLoadingTv,
+    error: tvError,
+  } = useTopItems(tvGenres, "tv");
+
+  return (
+    <div className="Movies-shows">
+      <Slider />
+      <div className="Genres">
+        <h2 className="Genres-title">Movies</h2>
+        <Categories />
+        <TopItems
+          title="Top 10 Movies in Genres"
+          categories={movieCategories}
+          isLoading={isLoadingMovies}
+          error={movieError}
+        />
+        <Trending />
+        <NewRelease />
+      </div>
+
+      <div className="Genres">
+        <h2 className="Genres-title">Shows</h2>
+        <TopItems
+          title="Top 10 TV Shows in Genres"
+          categories={tvCategories}
+          isLoading={isLoadingTv}
+          error={tvError}
+        />
+        <Trending mediaType="tv" title="Trending TV Shows" />
+        <NewRelease type="tv" />
+      </div>
+      <FreeTrial />
+    </div>
+  );
+};
+
+export default Shows;

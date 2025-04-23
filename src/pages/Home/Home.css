@@ -1,0 +1,12 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.page {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    gap: 50px;
+}

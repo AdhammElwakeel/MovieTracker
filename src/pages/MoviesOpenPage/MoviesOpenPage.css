@@ -1,0 +1,56 @@
+.movies-details-page {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+.pageDetails {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px;
+}
+.movie-information {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 70%;
+}
+
+.movie-data {
+    border-radius: 12px;
+    border: 1px solid var(--Black-15, #262626);
+    background: var(--Black-10, #1a1a1a);
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    width: 20%;
+}
+@media (max-width: 768px) {
+    .pageDetails {
+        flex-direction: column;
+        align-items: center;
+    }
+    .movie-data {
+        width: 50%;
+    }
+}
+@media (max-width: 576px) {
+    .movie-information {
+        width: 100%;
+    }
+    .movie-data {
+        width: 85%;
+    }
+}
+@media (max-width: 375px) {
+    .reviews {
+        display: none;
+    }
+}

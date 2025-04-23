@@ -1,0 +1,9 @@
+.subscriptionPage {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}

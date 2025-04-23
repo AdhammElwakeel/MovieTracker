@@ -1,0 +1,39 @@
+.Movies-shows {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    gap: 50px;
+    padding: 20px;
+}
+.Genres {
+    border-radius: 12px;
+    border: 1px solid var(--Black-15, #262626);
+
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+
+    padding: 20px;
+}
+.Genres-title {
+    margin-top: -39px;
+    border-radius: 8px;
+    padding: 10px 24px;
+
+    background: var(--Red-45, #e50000);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 3%;
+
+    color: var(--Absolute-White, #fff);
+    text-align: center;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}

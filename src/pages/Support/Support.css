@@ -1,0 +1,11 @@
+.supportPage {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 20px;
+    gap: 50px;
+
+    margin: auto;
+
+    width: 90%;
+}
